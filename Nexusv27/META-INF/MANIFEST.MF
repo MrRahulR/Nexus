@@ -1,0 +1,7 @@
+Manifest-Version: 1.0 
+Rsrc-Class-Path: ./ httpclient-4.5.2.jar httpcore-4.4.4.jar commons-lo
+ gging-1.2.jar commons-codec-1.9.jar json-simple-1.1.jar jcommander-1.
+ 48.jar directory-watcher-1.2.0.jar 
+Class-Path: . 
+Rsrc-Main-Class: com.nexusv1.init.MainCommand
+Main-Class: org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader
