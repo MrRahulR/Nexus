@@ -119,22 +119,22 @@ public class ClassA {
 							.get("reportDirectory").toString()
 							.replace(File.separator, "/");
 
-					System.err.println(localObject1.toString().replace(
-							File.separator, "/"));
+					/*System.err.println(localObject1.toString().replace(
+							File.separator, "/"));*/
 
 					localObject1 = (new File((String) localObject1))
 							.listFiles();
 
 					File[] localObject3 = (File[]) localObject1;
 
-					System.err.println(localObject3.toString());
+					//System.err.println(localObject3.toString());
 
 					int num = localObject3.length;
 					int i = 0;
 
 					for (int l = 0; l < num; l++) {
-						System.err.println(((File) (localObject3[l])).getName()
-								+ "name");
+						/*System.err.println(((File) (localObject3[l])).getName()
+								+ "name");*/
 						if (((File) (localObject3[l])).getName().equals(
 								"testng-results.xml")) {
 
@@ -178,7 +178,7 @@ public class ClassA {
 
 		}
 
-		System.err.println("boo" + bool);
+		//System.err.println("boo" + bool);
 		return bool;
 	}
 
@@ -213,7 +213,7 @@ public class ClassA {
 			array[3] = (String) ((HashMap) localObject1).get("reportDirectory")
 					.toString();
 
-			System.err.println(array);
+			//System.err.println(array);
 
 		}
 		return array;

@@ -73,15 +73,15 @@ public class ClassB {
 
 			HashMap<String, String> paramMapofStrings = new HashMap<String, String>();
 
-			System.out.println(paramArrayOfString[1] + "111"
-					+ paramArrayOfString[3]);
+			/*System.out.println(paramArrayOfString[1] + "111"
+					+ paramArrayOfString[3]);*/
 
 			paramMapofStrings.put(paramArrayOfString[0], paramArrayOfString[1]);
 			paramMapofStrings.put(paramArrayOfString[2], paramArrayOfString[3]);
 
 			localObject = a(paramMapofStrings);
-			System.out.println(paramArrayOfString[3] + "---"
-					+ paramArrayOfString[1]);
+			/*System.out.println(paramArrayOfString[3] + "---"
+					+ paramArrayOfString[1]);*/
 			try {
 				if (!(((String) ((Map) localObject).get("flag")).equals("true")))
 					return;
@@ -117,7 +117,7 @@ public class ClassB {
 
 	private static Map a(Map paramMap) {
 
-		System.err.println(paramMap.values().toString() + " ++");
+		//System.err.println(paramMap.values().toString() + " ++");
 
 		Object obj1 = new Defination();
 
@@ -185,8 +185,8 @@ public class ClassB {
 
 			requestCall.setEntity(entity);
 
-			System.err.println("entity-----"
-					+ requestCall.getHeaders("content-type").toString());
+			/*System.err.println("entity-----"
+					+ requestCall.getHeaders("content-type").toString());*/
 
 			obj2 = httpClient.execute(requestCall);
 
@@ -225,7 +225,7 @@ public class ClassB {
 		for (;;) {
 			if (a(paramString1)) {
 
-				System.err.println("SUCCESSSSSSSSSSSSSSSSSss");
+				//System.err.println("SUCCESSSSSSSSSSSSSSSSSss");
 
 				Object obj1 = a(paramString1, paramString2);
 				Defination def = new Defination();
@@ -324,7 +324,7 @@ public class ClassB {
 
 			Object obj1 = path.getFileSystem().newWatchService();
 
-			System.err.println(obj1.toString());
+			//System.err.println(obj1.toString());
 
 			path.register((WatchService) obj1, new WatchEvent.Kind[] {
 					StandardWatchEventKinds.ENTRY_CREATE,
@@ -346,7 +346,7 @@ public class ClassB {
 				WatchEvent<Path> ev = (WatchEvent<Path>) event;
 				Path fileName = ev.context();
 
-				System.err.println(kind.name() + ":" + fileName);
+				//System.err.println(kind.name() + ":" + fileName);
 
 				if (kind == ENTRY_MODIFY
 						&& fileName.toString().equals("testng-results.xml")) {
@@ -355,7 +355,7 @@ public class ClassB {
 
 				bool = key.reset();
 				if (!bool) {
-					System.err.println(bool);
+					//System.err.println(bool);
 					break;
 				}
 
@@ -413,8 +413,8 @@ public class ClassB {
 			localJSONObject1.put("pass", Integer.valueOf(Integer
 					.parseInt(((Element) em).getAttribute("passed"))));
 
-			System.err.println("jsonobb-------------------- " + node);
-			System.err.println(localJSONObject1.toJSONString().toString());
+			//System.err.println("jsonobb-------------------- " + node);
+			//System.err.println(localJSONObject1.toJSONString().toString());
 
 			JSONObject obj4 = new JSONObject();
 			Object obj5 = ManagementFactory.getRuntimeMXBean();
@@ -435,17 +435,17 @@ public class ClassB {
 
 			int i = (TimeZone.getDefault()).getRawOffset() / 60000;
 
-			System.out.println(i);
+			//System.out.println(i);
 
 			localJSONObject1.put("tz", Integer.valueOf(i));
 			NodeList obj7 = localObject3.getElementsByTagName("suite");
 
 			System.err
 					.println("--------------------------------------------------------");
-			System.err.println(localJSONObject1.toJSONString().toString());
-			System.err.println(obj4.toString());
-			System.err.println(l + " " + obj5.toString());
-			System.err.println(i + "   " + obj7);
+			//System.err.println(localJSONObject1.toJSONString().toString());
+			//System.err.println(obj4.toString());
+			//System.err.println(l + " " + obj5.toString());
+			//System.err.println(i + "   " + obj7);
 			System.err
 					.println("--------------------------------------------------------");
 
@@ -472,7 +472,7 @@ public class ClassB {
 
 				System.err
 						.println("--------------------------------------------------------");
-				System.err.println(locJsonObject2.toJSONString().toString());
+				//System.err.println(locJsonObject2.toJSONString().toString());
 
 				new JSONArray();
 
@@ -769,7 +769,7 @@ public class ClassB {
 		}
 		System.out.println("[" + date()
 				+ "] : We're connecting you...Stay there!");
-		System.err.println(localJSONObject1.toJSONString().toString());
+		//System.err.println(localJSONObject1.toJSONString().toString());
 
 		return localJSONObject1;
 

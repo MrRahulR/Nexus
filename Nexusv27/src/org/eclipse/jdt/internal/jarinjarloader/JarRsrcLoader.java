@@ -18,33 +18,33 @@ public class JarRsrcLoader {
 			Exception {
 
 		Object localObject1 = a();
-		System.err.println("Here");
+		//System.err.println("Here");
 
 		Object localObject2 = Thread.currentThread().getContextClassLoader();
 
 		URL.setURLStreamHandlerFactory(new d((ClassLoader) localObject2));
 
-		System.err.println(((a) localObject1).b.length);
+		//System.err.println(((a) localObject1).b.length);
 
 		URL[] localObject3 = new URL[((a) localObject1).b.length];
 
 		for (int i = 0; i < ((a) localObject1).b.length; i++) {
 
-			System.err.println(i);
+			//System.err.println(i);
 
 			String rsrcPath = ((a) localObject1).b[i];
 
 			if (rsrcPath.endsWith("/")) {
 				localObject3[i] = new URL("rsrc:" + rsrcPath);
-				System.err.println(rsrcPath);
+				//System.err.println(rsrcPath);
 			}
 
 			else {
 				localObject3[i] = new URL("jar:rsrc:" + rsrcPath + "!/");
-				System.err.println(rsrcPath);
+				//System.err.println(rsrcPath);
 			}
 		}
-		System.err.println(Arrays.toString(localObject3));
+		//System.err.println(Arrays.toString(localObject3));
 
 		ClassLoader jceClassLoader = new URLClassLoader(localObject3, null);
 		Thread.currentThread().setContextClassLoader(jceClassLoader);
@@ -84,7 +84,7 @@ public class JarRsrcLoader {
 				 */
 
 				if (is == null) {
-					System.out.println("IS IS NULL");
+					//System.out.println("IS IS NULL");
 				}
 				if (is != null) {
 
@@ -93,12 +93,12 @@ public class JarRsrcLoader {
 
 					Attributes attr = manifest.getMainAttributes();
 
-					System.err.println("attr.size()" + attr.size());
+					//System.err.println("attr.size()" + attr.size());
 
 					result.a = attr.getValue("Rsrc-Main-Class");
 					String rsrcCP = attr.getValue("Rsrc-Class-Path");
 
-					System.out.println(result.a + "====" + rsrcCP);
+					//System.out.println(result.a + "====" + rsrcCP);
 
 					if (rsrcCP == null)
 						rsrcCP = "";
